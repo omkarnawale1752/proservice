@@ -8,7 +8,7 @@ import { HospitalPageRoutingModule } from './hospital-routing.module';
 
 import { HospitalPage } from './hospital.page';
 import { HttpClientModule } from '@angular/common/http';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 
