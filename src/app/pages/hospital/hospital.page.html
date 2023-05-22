@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar (ionInput)="onSearch($event)"></ion-searchbar>
+
+    <ion-title class="ion-text-center">EMPLOYEE INFO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let data of dataa">
+    <ion-card-header>
+      
+      <ion-card-title>ID : {{data.id}}</ion-card-title>
+      <ion-card-subtitle>NAME : {{data.name}}</ion-card-subtitle>
+      <ion-card-subtitle>USERNAME : {{data.username}}</ion-card-subtitle>
+      <ion-card-subtitle>EMAIL : {{data.email}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-button  (click)="onclick(data.id)" expand="block">More Information</ion-button>
+  </ion-card>
+</ion-content>

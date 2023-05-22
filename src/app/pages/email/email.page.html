@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Compose Email</ion-title>
+
+    <ion-buttons slot="end">   
+      <ion-button (click)="captureImage()">
+        <ion-icon size="large" slot="icon-only"  name="attach"></ion-icon>
+      </ion-button>
+      <ion-button (click)="OpenEmailComposer()">
+        <ion-icon size="large" slot="icon-only"  name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    
+    <ion-item>
+      <ion-label color="primary" stacked>To : </ion-label>
+      <ion-input [(ngModel)]="to" type="text" placeholder="Email id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Subject : </ion-label>
+      <ion-input  [(ngModel)]="subject" type="text" placeholder="subject"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating" color="primary" >Body : </ion-label>
+    <ion-textarea [(ngModel)]="body" [autoGrow]="true" [rows]="10"></ion-textarea>
+  </ion-item>
+    
+    
+  <ion-card *ngIf="currentImage">
+    <ion-button style="position:'absolute';right:0" (click)="deleteImage()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+    <img [src]="currentImage" />
+    
+  </ion-card>
+  
+   
+  </div>
+  
+</ion-content>

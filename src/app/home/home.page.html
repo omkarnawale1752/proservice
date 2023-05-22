@@ -1,0 +1,54 @@
+<div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar  shape="round" color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button auto-hide="false" menuId="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="width: 100%; position: absolute; left: 0; height: 0;"  >USER INFO</ion-title>
+      </ion-toolbar>
+     
+      
+      
+    </ion-header>
+    
+    <ion-content [fullscreen]="true">
+      <ion-card >
+        <ion-card-header>
+          <ion-card-title>Fullname :{{userdata?.first_name}} {{userdata?.last_name}} </ion-card-title>
+          <ion-card-subtitle>Email : {{userdata?.email}}</ion-card-subtitle>
+          <ion-card-subtitle>Emp ID :{{userdata?.id}}</ion-card-subtitle>
+          <ion-card-subtitle>Dept Name :{{userdata?.department_name}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+
+      <ion-segment  scrollable mod="md" [value]="segment" (ionChange)="segmentChanged($event)"  >
+      <ion-segment-button  *ngFor="let data of corporateodata ; let i = index" value="{{data.selectedTab}}" id="{{i}}">
+        <ion-label>{{data.title}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    
+
+  
+    <!--<swiper-container style="width:100%" #slides pager="false" [options]="sliderOptions" (ionSlideWillChange)="slideChanged($event)" [modules]="swiperModules">
+    
+      <swiper-slide *ngFor="let data of corporateodata">
+      <div style="height: 100%;width:100%; align-items: center; ">
+        <ion-card *ngFor="let subpage of data.subpages">
+      <ion-grid>
+        <ion-row >
+          <ion-col size="3" >
+            <div style="background-color:#55cda6;width:60%; padding:10px;  ">
+            <img  [src]="baseURL+subpage.icon">
+            </div> 
+          </ion-col>
+          <ion-col size="9" style="padding:4%" class="ion-text-start">{{subpage.title}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    </div>
+  </swiper-slide>
+  </swiper-container>-->
+</ion-content> 
+</div>
+

@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="formGroup flex-center">
+  <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success">templatedrivenform</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content >
+
+        <ion-item>
+          <ion-label for="username">Username</ion-label>
+          <ion-input type="text" class="form-control" id="username" placeholder="enter username" name="username" ngModel required></ion-input>
+        </ion-item> 
+        
+        <ion-item>
+          <ion-label for="password">password</ion-label>
+          <ion-input type="password" class="form-control" id="password" placeholder="enter password" name="password" ngModel required></ion-input>
+        </ion-item>
+        
+
+        <ion-button type="submit" class="btn btn-success">submit</ion-button>
+      </ion-card-content>
+    </ion-card>
+ 
+</form>
+</div>
+</ion-content>

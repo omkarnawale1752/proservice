@@ -1,0 +1,68 @@
+<ion-app>
+  <ion-menu contentId="main" menuId="main-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-menu-toggle>
+        <ion-item>
+      <ion-button  shape="round" expand="block"  [routerLink]="['/product']">TASK TO PERFORM</ion-button>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item>
+      <ion-button shape="round" expand="block" [routerLink]="['/hospital']">EMPLOYEE INFO [publicAPI]</ion-button>
+    </ion-item>
+    
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block" [routerLink]="['/camera-plugin']">CameraPlugin</ion-button>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block"  (click)="openBrowser()">App Browser</ion-button>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block" [routerLink]="['/device']"  >Device Info</ion-button>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block" [routerLink]="['/email']">Email Composer</ion-button>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block" [routerLink]="['/file-transfer']">File-transfer</ion-button>
+    </ion-item>
+    
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item>
+  <ion-button shape="round" expand="block" [routerLink]="['/push']">PushNotification</ion-button>
+</ion-item>
+</ion-menu-toggle>
+<ion-menu-toggle>
+  <ion-item>
+<ion-button shape="round" expand="block" [routerLink]="['/infinatescroll']">InfiniteScroll</ion-button>
+</ion-item>
+</ion-menu-toggle>
+    <ion-menu-toggle>
+    <ion-item>
+      <ion-button shape="round" expand="block" color="danger" (click)="logout()">logout</ion-button>
+    </ion-item>
+  </ion-menu-toggle>
+  
+    
+      </ion-list>
+    </ion-content>
+  </ion-menu> 
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

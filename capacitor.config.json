@@ -1,0 +1,6 @@
+{
+    "appId": "com.example.app",
+    "appName": "proservice",
+    "webDir": "www",
+    "bundledWebRuntime": false
+  }

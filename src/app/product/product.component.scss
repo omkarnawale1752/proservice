@@ -1,0 +1,32 @@
+ion-radio {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  
+  ion-radio.radio-checked::part(container) {
+    background: #fbfafc;
+    border-color: transparent;
+  }
+  
+  ion-radio.radio-checked::part(mark) {
+    width: 6px;
+    height: 10px;
+  
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #fff;
+  
+    transform: rotate(45deg);
+  }
+  ion-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #fbfbfb;
+  border: solid 1px #090909;
+  color: #0c0c0c;
+}

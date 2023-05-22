@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "964599725398",
+    "project_id": "navitusheros",
+    "storage_bucket": "navitusheros.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964599725398:android:a4cc7b9e32ff81d5676af7",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964599725398-v6r2744n5o9bpdlrtp8rhu4viuc9ivkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnn8Y9nO6OhdxX08SnQyG4K7PTKXn9yx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964599725398-v6r2744n5o9bpdlrtp8rhu4viuc9ivkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964599725398:android:afe9547479cb1841676af7",
+        "android_client_info": {
+          "package_name": "com.navitus.pushnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964599725398-v6r2744n5o9bpdlrtp8rhu4viuc9ivkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnn8Y9nO6OhdxX08SnQyG4K7PTKXn9yx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964599725398-v6r2744n5o9bpdlrtp8rhu4viuc9ivkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

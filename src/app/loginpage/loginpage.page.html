@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content> 
+    <ion-progress-bar type="indeterminate" *ngIf="is_loading"></ion-progress-bar>
+  <div class="flex-center ion-padding" *ngIf="!islogin" >
+    <form [formGroup]= "form">
+    <div id="header">
+    <h1>Login</h1>
+    <img src = "assets/png.png">
+    </div>
+  
+    
+      <ion-item> 
+    <ion-input id= "form1" placeholder="Email" type="email" formControlName="email" ></ion-input>
+  </ion-item>
+  <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.['required']">Email is mandatory</ion-label>
+        <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.['email']">Email is invalid</ion-label>
+
+    <ion-item>
+    <ion-input id= "form2" [type]="passwordType" placeholder="password" formControlName="password"></ion-input>
+    <ion-icon name="eye" slot="end" (click)="showPassword()"></ion-icon>
+    <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.['required']">password is mandatory</ion-label>
+    <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.['password']">password is invalid</ion-label>
+
+    </ion-item>
+    <ion-button expand = "block" shape="round" [disabled]="!form.valid" (click)="login()"> Login </ion-button>
+    
+    </form>
+    </div>
+    </ion-content> 
+
+

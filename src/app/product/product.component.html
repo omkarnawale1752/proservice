@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Product Dashboard</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <ion-card>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1">ID</ion-col>
+            <ion-col size="8">TASK TO DO</ion-col>
+            <ion-col size="3">ACTION TO DO</ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </ion-item>
+  </ion-card>
+  <ion-card>
+  <ion-item *ngFor=" let item of product;let i=index">
+    
+    <ion-grid >
+      <ion-row>
+        <ion-col size="1">{{i+1}}</ion-col>
+        <ion-col size="8"><p style="word-break: break-all">{{item.task}}</p></ion-col>
+        <ion-col size="3">
+          <ion-button  (click)="openModal(item,i)">
+            <ion-icon name="pencil"></ion-icon>
+          </ion-button>
+          <ion-button  color="warning" (click)="hapus(i)">
+            <ion-icon name="trash" ></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-item>
+</ion-card>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+<ion-fab-button (click)="openModal()">
+  <ion-icon name="add"></ion-icon>
+</ion-fab-button>
+
+</ion-fab>
+</ion-content>
+
+
+
+
+
+
