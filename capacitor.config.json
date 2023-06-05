@@ -1,6 +1,6 @@
 {
-    "appId": "com.example.app",
-    "appName": "proservice",
-    "webDir": "www",
-    "bundledWebRuntime": false
-  }
+  "appId": "com.navituseducation.lmstestapp",
+  "appName": "iOS_APP",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
